@@ -1,0 +1,63 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    background: #292B2C;
+}
+
+.header{
+   display: block;
+   justify-content: center;
+   text-align: center;
+   /* width: 100%; */
+   margin: 2rem 20rem 0 0;
+}
+
+.to-do h1{
+    color: aliceblue;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-right: 4rem;
+}
+
+.task-input {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .task-input input {
+    width: 100%;
+    padding-left: 1rem;
+    margin-left: 30rem;
+    margin-right: 10px;
+    border: 1px solid #eee;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+  .task-input button {
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#addTaskButton {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    color: #ffffff;
+    background: #1E2125;
+
+}
