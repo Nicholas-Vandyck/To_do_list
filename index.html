@@ -13,15 +13,25 @@
     <title>To-Do-List</title>
 </head>
 <body>
-    
+    <div id="toggle-icon" class="light-mode">
+        <img class="light_mode" id="sunny" src="./asset/sunny.png" alt="light">
+        <img class="dark_mode" id="moony" src="./asset/moon.png" alt="dark">
+    </div>
 <section class="header">
+   <div class="sub_header">
     <div class="to-do">
         <h1>To-do-list</h1>
     </div>
 
-   <div class="task-input">
-    <input type="text" id="taskInput" placeholder="Please Enter A Task....">
-    <button id="addTaskButton">Add Task</button>
+   <field class="task-input" id="todo-form">
+    <input type="text" id="taskInput" placeholder="Please enter a task....">
+    <button id="addTaskButton" type="submit" >Add Task</button>
+    
+   </field>
+   <span class="error-blank"></span>
+   <ul id="todo-list"></ul>
+   <button id="deleteAllButton" type="delete" >Delete All Task</button>
+  
    </div>
 </section>
 <section class="contact">
