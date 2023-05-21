@@ -53,6 +53,7 @@ body {
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .header {
@@ -94,7 +95,7 @@ body {
     border-radius: 10px;
 }
 
-.task-input #addTaskButton, #deleteAllButton{
+.task-input #addTaskButton{
     width: 150px;
     border-radius:5px;
     border: 1px solid #eee;
@@ -106,14 +107,43 @@ body {
     -moz-border-radius:5px;
     -ms-border-radius:5px;
     -o-border-radius:5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
 }
 
-#deleteAllButton{
-    margin: 1rem;
+#addTaskButton:hover{
+    background-color: rgb(3, 88, 7);
+}
+
+#deleteAllButton {
+  margin: 1rem;
+  padding: 10px 15px;
+  background-color: #1E2125;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#deleteAllButton:hover {
+  background-color: #d32f2f;
 }
 
 #todo-list {
-    max-height: 200px; 
+    max-height: 180px; 
     overflow-y: auto; 
 }
 

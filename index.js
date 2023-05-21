@@ -3,6 +3,7 @@ document.getElementById('toggle-icon').addEventListener('click', function() {
     const body = document.body;
     const sun = document.querySelector('.light-mode');
     const header = document.querySelector('.header');
+    const li = document.querySelector('.li');
     
 
     if (body.classList.contains('dark-mode')) {
@@ -10,6 +11,7 @@ document.getElementById('toggle-icon').addEventListener('click', function() {
         body.classList.remove('dark-mode');
         sun.classList.add('white-sun');
         header.style.border= '2px solid #000';
+        li.style.border = '2px solid #000';
     } else {
         // Switch to dark mode
         body.classList.add('dark-mode');
@@ -31,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render tasks in ascending order
     renderTasks();
 
-    addTaskButton.addEventListener('click', function(event) {
-        event.preventDefault();
+    addTaskButton.addEventListener('click', function() {
+
         const taskText = taskInput.value.trim();
 
         if (taskText === '') {
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
            errorBlank.style.color = 'red';
             return;
         } else{
-            taskInput.style.border = '2px solid green';
+            taskInput.style.border = '';
             errorBlank.textContent = '';
             addTask(taskText);
             taskInput.value = '';
