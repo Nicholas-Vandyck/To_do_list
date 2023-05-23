@@ -120,13 +120,15 @@ body {
 }
 
 #deleteAllButton {
-  margin: 1rem;
-  padding: 10px 15px;
+  width: 150px;
+  margin: 2rem 0 1rem 0;
+  padding: 10px 1px;
   background-color: #1E2125;
   color: #fff;
   border: 1px solid #eee;
   border-radius: 5px;
   cursor: pointer;
+  float: right;
   transition: background-color 0.5s;
   -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
@@ -157,6 +159,21 @@ li {
 
 .error-blank{
     margin: 0.1px;
-    font-size: 15px;
+    font-size: 12px;
 }
 
+.completed{
+    text-decoration: line-through;
+    /* margin: 5px; */
+    color: #d32f2f;
+}
+
+.task-stats{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.pending{
+    margin-top: 2rem;
+}
