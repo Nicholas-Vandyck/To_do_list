@@ -1,10 +1,11 @@
-
- *, ::before, ::after {
+/* Resetting default margin, padding, and box-sizing for all elements */
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Styles for the body */
 body {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -13,11 +14,13 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Styles for dark mode */
 .dark-mode{
     background-color: #333;
     color: #fff;
 }
 
+/* Styles for light mode and toggle icons */
 .light-mode #sunny {
     display: none;
     fill: #000;
@@ -27,6 +30,7 @@ body {
     display: block;
 }
 
+/* Styles for dark mode and toggle icons */
 .dark-mode #sunny {
     display: block;
 }
@@ -39,6 +43,7 @@ body {
     display: none;
 }
 
+/* Styles for toggle icon image */
 #toggle-icon img{
     position: relative;
     width: 40px;
@@ -46,6 +51,7 @@ body {
     margin: 1rem;
 }
 
+/* Styles for toggle icons */
 #sunny, #moony{
     position: absolute;
     float: right;
@@ -56,6 +62,7 @@ body {
     cursor: pointer;
 }
 
+/* Styles for the header */
 .header {
     position: absolute;
     display: block;
@@ -66,10 +73,12 @@ body {
     border: 2px solid #000;
 }
 
+/* Styles for subheader */
 .sub_header{
     margin: 1rem;
 }
 
+/* Styles for the to-do list title */
 .to-do h1 {
     line-height: 60px;
     font-size: 40px;
@@ -78,15 +87,18 @@ body {
     text-transform: capitalize;
 }
 
-
+/* Styles for the to-do list container */
 .to-do {
     width: 250px;
 }
+
+/* Styles for task input container */
 .task-input {
     display: flex;
     margin-bottom: 10px;
 }
 
+/* Styles for task input and list items */
 .task-input input, li {
     width: 550px;
     padding: 0.5rem;
@@ -95,6 +107,12 @@ body {
     border-radius: 10px;
 }
 
+/* Styles for span elements */
+span{
+    margin-left: 10px;
+}
+
+/* Styles for add task button */
 .task-input #addTaskButton{
     width: 150px;
     border-radius:5px;
@@ -115,10 +133,12 @@ body {
     -o-transition: background-color 0.5s;
 }
 
+/* Styles for add task button on hover */
 #addTaskButton:hover{
     background-color: rgb(3, 88, 7);
 }
 
+/* Styles for delete all button */
 #deleteAllButton {
   width: 150px;
   margin: 2rem 0 1rem 0;
@@ -140,40 +160,49 @@ body {
   -o-border-radius: 5px;
 }
 
+/* Styles for delete all button on hover */
 #deleteAllButton:hover {
   background-color: #d32f2f;
 }
 
+/* Styles for the to-do list */
 #todo-list {
     max-height: 180px; 
     overflow-y: auto; 
 }
 
+/* Styles for the to-do list in dark mode */
 .dark-mode ul {
     color: #000;
 }
 
+/* Styles for list items */
 li {
     margin-bottom: 10px;
 }
 
+/* Styles for error blank */
 .error-blank{
     margin: 0.1px;
     font-size: 12px;
 }
 
+/* Styles for completed tasks */
 .completed{
     text-decoration: line-through;
-    /* margin: 5px; */
     color: #d32f2f;
 }
 
+/* Styles for task statistics */
 .task-stats{
     display: flex;
     justify-content: space-around;
     font-size: 14px;
 }
 
+/* Styles for pending tasks */
 .pending{
     margin-top: 2rem;
+    display: flex;
+    gap: 6px;
 }

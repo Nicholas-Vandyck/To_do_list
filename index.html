@@ -9,49 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inter:wght@100;200;300;400;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-
     <title>To-Do-List</title>
 </head>
 <body>
     <div id="toggle-icon" class="light-mode">
+        <!-- Toggle icon for light mode -->
         <img class="light_mode" id="sunny" src="./asset/sunny.png" alt="light">
+        <!-- Toggle icon for dark mode -->
         <img class="dark_mode" id="moony" src="./asset/moon.png" alt="dark">
     </div>
-<section class="header">
-   <div class="sub_header">
-    <div class="to-do">
-        <h1>To-do-list</h1>
-    </div>
-
-   <field class="task-input" id="todo-form">
-    <input type="text" id="taskInput" placeholder="Please enter a task....">
-    <button id="addTaskButton" type="submit" >Add Task</button>
     
-   </field>
-   <span class="error-blank"></span>
-   <ul id="todo-list"></ul>
+    <section class="header">
+        <!-- Header section -->
+        <div class="sub_header">
+            <!-- Sub-header section -->
+            <div class="to-do">
+                <!-- To-do container -->
+                <h1>To-do-list</h1>
+            </div>
 
-   <button id="deleteAllButton" type="delete" >Delete All Task</button>
-  
-   <div class="pending">
-    <span>Please you have <span class="pendingNum"></span> pending task(s) </span>
-   </div>
-   </div>
-</section>
-<section class="contact">
+              <!-- Heading for the to-do list -->
+            <form class="task-input" id="todo-form">
+                <!-- Task input field -->
+                <input type="text" id="taskInput" placeholder="Please enter a task....">
+                <!-- Button to add task -->
+                <button id="addTaskButton" type="submit" >Add Task</button>
+            </form>
+            
+            <!-- Placeholder for error message -->
+            <span class="error-blank"></span>
+            
+            <!-- List to display tasks -->
+            <ul id="todo-list"></ul>
+            
+            <!-- Button to delete all tasks -->
+            <button id="deleteAllButton" type="delete" >Delete All Task</button>
+            
+            <div class="pending">
+                <!-- Text showing the number of pending tasks -->
+                <p>Please you have <p class="pendingNum"></p> pending task(s) </p>
+            </div>
+        </div>
+    </section>
     
-</section>
-
-
-
-
-
-
-
-
-
-
-
+    <!-- JavaScript file -->
     <script src="./index.js"></script>
+    
 </body>
 </html>

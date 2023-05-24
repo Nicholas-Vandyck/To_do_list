@@ -1,36 +1,51 @@
- 
-document.getElementById('toggle-icon').addEventListener('click', function(event) {
-    event.preventDefault();
-    const body = document.body;
-    const sun = document.querySelector('.light-mode');
-    const header = document.querySelector('.header');
-
-    if (body.classList.contains('dark-mode')) {
-        // Switch to light mode
-        body.classList.remove('dark-mode');
-        sun.classList.remove('white-sun');
-        header.style.border= '2px solid #000';
-        localStorage.setItem('body', 'light-mode');
-    } else {
-        // Switch to dark mode
-        body.classList.add('dark-mode');
-        header.style.border= '2px solid #fff';
-        localStorage.setItem('body', 'dark-mode');
-    }
-
-});
 
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function(event) {
   event.preventDefault();
 
   // Get the necessary elements
+  const body = document.body;
+  const sun = document.querySelector('.light-mode');
+  const header = document.querySelector('.header');
   const taskInput = document.getElementById('taskInput');
   const addTaskButton = document.getElementById('addTaskButton');
   const todoList = document.getElementById('todo-list');
   const errorBlank = document.querySelector('.error-blank');
   const deleteAllButton = document.getElementById('deleteAllButton');
   const pendingTask = document.querySelector('.pendingNum');
+
+   // Event listener for the toggle icon
+   document.getElementById('toggle-icon').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    if (body.classList.contains('dark-mode')) {
+      // Switch to light mode
+      body.classList.remove('dark-mode');
+      sun.classList.remove('white-sun');
+      header.style.border = '2px solid #000';
+      localStorage.setItem('body', 'light-mode');
+    } else {
+      // Switch to dark mode
+      body.classList.add('dark-mode');
+      sun.classList.add('white-sun');
+      header.style.border = '2px solid #fff';
+      localStorage.setItem('body', 'dark-mode');
+    }
+  });
+
+// Load the saved mode from local storage
+const savedMode = localStorage.getItem('body');
+
+if (savedMode === 'dark-mode') {
+  // Set the dark mode
+  body.classList.add('dark-mode');
+  header.style.border = '2px solid #fff';
+} else {
+  // Set the light mode (default)
+  body.classList.remove('dark-mode');
+  sun.classList.remove('white-sun');
+  header.style.border = '2px solid #000';
+}
 
   // Function to update the task count
   function updateTaskCount() {
