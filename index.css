@@ -206,3 +206,8 @@ li {
     display: flex;
     gap: 6px;
 }
+
+#deleteIcon{
+    display: flex;
+    width: 20px;
+}

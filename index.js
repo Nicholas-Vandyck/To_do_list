@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   const errorBlank = document.querySelector('.error-blank');
   const deleteAllButton = document.getElementById('deleteAllButton');
   const pendingTask = document.querySelector('.pendingNum');
+  const savedMode = localStorage.getItem('body');
+  const checkBox = localStorage.getItem('checked');
 
    // Event listener for the toggle icon
    document.getElementById('toggle-icon').addEventListener('click', function(event) {
@@ -34,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
   });
 
 // Load the saved mode from local storage
-const savedMode = localStorage.getItem('body');
-
 if (savedMode === 'dark-mode') {
   // Set the dark mode
   body.classList.add('dark-mode');
@@ -49,7 +49,7 @@ if (savedMode === 'dark-mode') {
 
   // Function to update the task count
   function updateTaskCount() {
-    const taskCount = todoList.querySelectorAll('li:not(.completed) input[type="checkbox"]:not(:checked)').length;
+    const taskCount = todoList.querySelectorAll('li:not(.completed)').length;
     pendingTask.textContent = taskCount.toString();
   }
 
@@ -70,16 +70,19 @@ if (savedMode === 'dark-mode') {
       // Create checkbox
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
+
+      
       checkbox.addEventListener('change', function() {
         if (this.checked) {
           taskTextElement.classList.add('completed');
           listItem.classList.add('completed');
-      
+          localStorage.setItem('checked', 'completed');
         } else {
           taskTextElement.classList.remove('completed');
           listItem.classList.remove('completed');
+          localStorage.setItem('checked', 'umcompleted');
         }
-
+      
         updateTaskCount();
       });
 
@@ -152,7 +155,7 @@ if (savedMode === 'dark-mode') {
   });
 
   deleteAllButton.addEventListener('click', function() {
-    // Remove all tasks from the todo list
+    // Remove all tasks from the to-do list
     while (todoList.firstChild) {
       todoList.removeChild(todoList.firstChild);
     }
